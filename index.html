@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <h1 class="page-title">Calculator</h1>
+
+    <main class="calculator">
+
+        <!-- Calculator display -->
+        <div class="display">
+            <div class="previous-display" id="previous-display"></div>
+            <div class="current-display" id="current-display">0</div>
+        </div>
+
+        <!-- Calculator buttons -->
+        <div class="digits">
+
+            <div class="cal-digit">
+
+                <button class="btn c-btn" data-action="clear">C</button>
+
+                <button class="btn" data-action="delete"
+                    aria-label="Delete last digit">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+
+                <button class="btn" data-action="percent">%</button>
+
+                <button class="btn yello" data-operator="/"
+                    aria-label="Divide">
+                    <i class="fa-solid fa-divide"></i>
+                </button>
+
+                <button class="btn" data-number="7">7</button>
+                <button class="btn" data-number="8">8</button>
+                <button class="btn" data-number="9">9</button>
+                <button class="btn yello" data-operator="*">×</button>
+
+                <button class="btn" data-number="4">4</button>
+                <button class="btn" data-number="5">5</button>
+                <button class="btn" data-number="6">6</button>
+                <button class="btn yello" data-operator="-">−</button>
+
+                <button class="btn" data-number="1">1</button>
+                <button class="btn" data-number="2">2</button>
+                <button class="btn" data-number="3">3</button>
+                <button class="btn yello" data-operator="+">+</button>
+
+            </div>
+
+            <div class="lower-btn">
+
+                <button class="bigbtn" data-number="0">0</button>
+
+                <button class="btn" data-action="decimal">.</button>
+
+                <button class="bigbtn green-btn" data-action="equals">=</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

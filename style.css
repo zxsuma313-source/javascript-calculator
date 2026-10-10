@@ -1,0 +1,253 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background-color: rgb(0, 3, 9);
+    color: rgb(68, 204, 234);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title {
+    font-size: clamp(25px, 5vw, 36px);
+}
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+
+    background-color: rgb(9, 9, 9);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 16px;
+    gap: 18px;
+
+    box-shadow: 0 12px 35px rgba(87, 204, 236, 0.35);
+}
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display {
+    width: 100%;
+    min-height: 125px;
+
+    background-color: rgb(20, 20, 20);
+    color: white;
+
+    border-radius: 12px;
+    padding: 15px;
+
+    border-top: 2px solid rgb(2, 79, 109);
+    border-bottom: 2px solid rgb(3, 151, 70);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+
+    overflow: hidden;
+}
+
+.previous-display {
+    width: 100%;
+    min-height: 28px;
+    border-radius: 6px;
+    color: #aaa;
+    font-size: 16px;
+    text-align: right;
+     overflow-wrap: anywhere;
+}
+
+.current-display {
+    width: 100%;
+
+    color: white;
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: 600;
+    text-align: right;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   BUTTON SECTION
+========================= */
+
+.digits {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cal-digit {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+/* =========================
+   NORMAL BUTTONS
+========================= */
+
+.btn {
+    width: 100%;
+    min-width: 0;
+    height: 55px;
+
+    background-color: rgb(40, 40, 56);
+     border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: rgb(61, 61, 80);
+}
+
+.btn:active,
+.bigbtn:active {
+    transform: scale(0.96);
+}
+
+.btn:focus-visible,
+.bigbtn:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* =========================
+   LOWER BUTTONS
+========================= */
+
+.lower-btn {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 10px;
+}
+
+.bigbtn {
+    width: 100%;
+    min-width: 0;
+    height: 55px;
+
+    background-color: rgb(40, 40, 56);
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.bigbtn:hover {
+    background-color: rgb(61, 61, 80);
+}
+
+/* =========================
+   SPECIAL BUTTONS
+========================= */
+
+.yello {
+    background-color: rgb(216, 156, 2);
+    color: white;
+}
+
+.yello:hover {
+    background-color: rgb(238, 178, 20);
+}
+
+.c-btn {
+    background-color: #e53935;
+}
+
+.c-btn:hover {
+    background-color: #ff514b;
+}
+
+.green-btn {
+    background-color: #16803c;
+}
+
+.green-btn:hover {
+    background-color: #20a34f;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 400px) {
+    body {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .calculator {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .cal-digit {
+        gap: 8px;
+    }
+
+    .lower-btn {
+        gap: 8px;
+    }
+
+    .btn,
+    .bigbtn {
+        height: 50px;
+        border-radius: 8px;
+        font-size: 22px;
+    }
+
+    .display {
+        min-height: 110px;
+    }
+}
